@@ -298,6 +298,7 @@ class AsyncHTTP2Connection(AsyncConnectionInterface):
                             trace.return_value = event
 
                     event_stream_id = getattr(event, "stream_id", 0)
+                    print(event)
 
                     # The ConnectionTerminatedEvent applies to the entire connection,
                     # and should be saved so it can be raised on all streams.
